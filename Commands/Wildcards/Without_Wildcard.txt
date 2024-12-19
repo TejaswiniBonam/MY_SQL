@@ -1,0 +1,5 @@
+If no wildcard is specified, the phrase has to have an exact match to return a result.
+
+
+SELECT * FROM Customers
+WHERE Country LIKE 'Spain';
