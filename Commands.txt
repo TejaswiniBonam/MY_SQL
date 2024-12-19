@@ -1,0 +1,24 @@
+https://docs.google.com/document/d/1bbU7Iku5mXNFXvkxhfeDBAX6Ui_z9f70o2yoISR1sJI/edit?usp=sharing
+
+
+
+
+SELECT * FROM Customers;
+SELECT CustomerName, City FROM Customers;
+
+
+SELECT column1, column2, ...
+FROM table_name;
+
+
+
+The SELECT DISTINCT statement is used to return only distinct (different) values.
+
+SELECT DISTINCT Country FROM Customers;
+
+Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.
+
+
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
+
