@@ -1,0 +1,41 @@
+SQL Self Join
+A self join is a regular join, but the table is joined with itself.
+
+SELECT column_name(s)
+FROM table1 T1, table1 T2
+WHERE condition;
+
+
+T1 and T2 are different table aliases for the same table.
+In SQL, the <> symbol is used to represent "not equal to". 
+It is often used in a comparison expression to test whether a value is different from another value. 
+For example, the expression "salary <> 50000" would test whether the salary value is not equal to 50000.
+
+
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
+
+
+Example:
+
+
+CREATE TABLE GFGemployees(employee_id
+INT PRIMARY KEY, employee_name VARCHAR(50), manager_id INT);
+INSERT INTO GFGemployees (employee_id, employee_name, manager_id)
+VALUES  (1, 'Zaid', 3),  (2, 'Rahul', 3),  (3, 'Raman', 4), 
+(4, 'Kamran', NULL),  (5, 'Farhan', 4);
+
+
+list of employees and their corresponding managers
+
+
+SELECT e.employee_name AS employee,
+m.employee_name AS managerFROM
+GFGemployees AS e JOIN GFGemployees
+AS m ON e.manager_id = m.employee_id;
+
+
+We can do this without self join too
