@@ -1,0 +1,9 @@
+Using the - Wildcard
+The - wildcard allows you to specify a range of characters inside the [] wildcard.
+
+
+Return all customers starting with "a", "b", "c", "d", "e" or "f":
+SELECT * FROM Customers
+WHERE CustomerName LIKE '[a-f]%';
+
+
