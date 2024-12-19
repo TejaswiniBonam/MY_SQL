@@ -44,4 +44,39 @@ SELECT Column1 from table Name1;
 
 
 
+Alias for Tables
+The same rules applies when you want to use an alias for a table.
+
+
+SELECT * FROM Customers AS Persons;
+It might seem useless to use aliases on tables, but when you are using more than one table in your queries, it can make the SQL statements shorter.
+
+
+The following SQL statement selects all the orders from the customer with CustomerID=4 (Around the Horn). We use the "Customers" and "Orders" tables, and give them the table aliases of "c" and "o" respectively (Here we use aliases to make the SQL shorter):
+
+
+SELECT o.OrderID, o.OrderDate, c.CustomerName
+FROM Customers AS c, Orders AS o
+WHERE c.CustomerName='Around the Horn' AND c.CustomerID=o.CustomerID;
+
+
+The following SQL statement is the same as above, but without aliases:
+
+
+SELECT Orders.OrderID, Orders.OrderDate, Customers.CustomerName
+FROM Customers, Orders
+WHERE Customers.CustomerName='Around the Horn' AND Customers.CustomerID=Orders.CustomerID;
+
+
+Aliases can be useful when:
+There are more than one table involved in a query
+Functions are used in the query
+Column names are big or not very readable
+Two or more columns are combined together
+
+
+
+
+
+
 
