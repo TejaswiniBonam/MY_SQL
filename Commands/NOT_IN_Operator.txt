@@ -1,0 +1,19 @@
+NOT IN
+By using the NOT keyword in front of the IN operator, you return all records that are NOT any of the values in the list.
+Return all customers that are NOT from 'Germany', 'France', or 'UK':
+
+
+SELECT * FROM Customers
+WHERE Country NOT IN ('Germany', 'France', 'UK');
+
+NOT IN (SELECT) - SUB QUERY
+
+The result in the example above returned 74 records, that means that there are 17 customers that haven't placed any orders.
+Let us check if that is correct, by using the NOT IN operator.
+Return all customers that have NOT placed any orders in the Orders table:
+
+SELECT * FROM Customers
+WHERE CustomerID NOT IN (SELECT CustomerID FROM Orders);
+
+
+
