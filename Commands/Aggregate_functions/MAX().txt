@@ -1,0 +1,31 @@
+MAX() - returns the largest value within the selected column
+
+Find the highest price in the Price column:
+SELECT MAX(Price)
+FROM Products;
+
+
+Syntax
+
+SELECT MAX(column_name)
+	FROM table_name
+	WHERE condition;
+
+
+Set Column Name (Alias)
+When you use MAX(), the returned column will not have a descriptive name. To give the column a descriptive name, use the AS keyword:
+SELECT MAX(Price) AS LargestPrice
+FROM Products;
+
+So the output will come as a column with column heading as “Largest Price”
+
+
+Use MAX() with GROUP BY
+
+Here we use the MAX() function and the GROUP BY clause, to return the largest price for each category in the Products table:
+
+SELECT MAX(Price) AS SmallestPrice, CategoryID
+FROM Products
+GROUP BY CategoryID;
+
+
