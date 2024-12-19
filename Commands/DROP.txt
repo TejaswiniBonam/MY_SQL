@@ -1,0 +1,8 @@
+Delete a Table using DROP
+
+
+To delete the table completely, use the DROP TABLE statement:
+
+
+Remove the Customers table:
+DROP TABLE Customers;
